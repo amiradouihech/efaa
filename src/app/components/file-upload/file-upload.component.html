@@ -1,0 +1,42 @@
+<div class="container-fluid bg-beige text-white py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center animate__animated animate__fadeInLeft">
+      <h1 class="display-4 mb-4">Bienvenue sur notre plateforme de partage de fichiers</h1>
+      <p class="lead">Partagez des fichiers en toute simplicité avec vos amis et collègues.</p>
+      <blockquote class="blockquote mt-5">
+        <p id="quote-text" class="mb-0">{{ randomQuote }}</p>
+        <footer id="quote-author" class="blockquote-footer"></footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <div class="container mt-10">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="card">
+              <div class="card-header bg-primary text-white">
+                <h5 class="card-title">Télécharger des fichiers</h5>
+              </div>
+              <div class="card-body text-center">
+                <app-dynamic-select></app-dynamic-select>
+                <div class="form-group">
+                  <label for="fileInput" class="file-input-label">
+                    <span>Choisissez les fichiers à télécharger</span>
+                    <div class="file-input-wrapper">
+                      <input id="fileInput" type="file" multiple (change)="selectFiles($event)" />
+                    </div>
+                  </label>
+                </div>
+                <button class="btn btn-success btn-lg btn-upload" [disabled]="!selectedFiles || selectedFiles.length === 0" (click)="upload()">
+                  Télécharger
+                </button>
+                <div *ngFor="let file of selectedFiles" class="mt-3">
+                  <p>{{ file.name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

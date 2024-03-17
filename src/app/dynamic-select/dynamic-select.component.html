@@ -1,0 +1,27 @@
+<div class="form-group animate__animated animate__fadeInRight">
+    <label for="niveau" class="form-label">Niveau :</label>
+    <select id="niveau" class="form-control" [(ngModel)]="selectedNiveau" (change)="onNiveauSelected(selectedNiveau)">
+        <option *ngFor="let niveau of niveaux" [value]="niveau">{{ niveau }}</option>
+    </select>
+</div>
+
+<div *ngIf="sections && sections.length > 0" class="form-group animate__animated animate__fadeInRight">
+    <label for="section" class="form-label">Section :</label>
+    <select id="section" class="form-control" [(ngModel)]="selectedSection" (change)="onSectionSelected(selectedSection)">
+        <option *ngFor="let section of sections" [value]="section">{{ section }}</option>
+    </select>
+</div>
+
+<div *ngIf="semestres && semestres.length > 0" class="form-group animate__animated animate__fadeInRight">
+    <label for="semestre" class="form-label">Semestre :</label>
+    <select id="semestre" class="form-control" [(ngModel)]="selectedSemestre" (change)="onSemestreSelected(selectedSemestre)">
+        <option *ngFor="let semestre of semestres" [value]="semestre">{{ semestre }}</option>
+    </select>
+</div>
+
+<div *ngIf="cours && cours.length > 0" class="form-group animate__animated animate__fadeInRight">
+    <label for="cours" class="form-label">Cours :</label>
+    <select id="cours" class="form-control" [(ngModel)]="selectedCours">
+        <option *ngFor="let cour of cours" [value]="cour">{{ cour }}</option>
+    </select>
+</div>

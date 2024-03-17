@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.bg-beige {
+  background-color: #fb8805;
+}
+
+.card {
+  border: 1px solid #fb8805;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.btn-upload {
+  transition: all 0.3s ease;
+}
+
+.btn-upload:hover {
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeInLeft {
+  animation-name: fadeInLeft;
+}
+/* Style pour le champ de fichier */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.file-input-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-label {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-input-label:hover {
+  background-color: #0056b3;
+}
+
+.btn-upload {
+  transition: all 0.3s ease;
+}
+
+.btn-upload:hover {
+  transform: scale(1.05);
+}
+
+/* Style pour les cartes */
+.card {
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
